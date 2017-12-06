@@ -139,10 +139,7 @@ ul {
 
 @media (max-width: 768px) {
   .col-6-12, .col-4-12 {
-    width: 100%; }
-  .col-3-12 {
-    width: 50%;
-    margin-top: 80px; } }
+    width: 100%; } }
 
 @media (min-width: 768px) {
   .col-push-3 {
@@ -575,17 +572,11 @@ ul {
   margin-bottom: 24px; }
 
 .self-text {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 40px;
   color: #554236;
-  margin-bottom: 24px; }
-
-.self-name {
-  font-size: 18px;
-  line-height: 40px;
-  color: #554236; }
-  .self-name span {
-    color: #E98B2A; }
+  margin-bottom: 24px;
+  font-family: 'Raleway','Helvetica', 微軟正黑體, 'Noto Sans TC', 'robot', arial, sans-serif; }
 
 .skill {
   padding-top: 80px;
@@ -657,11 +648,9 @@ ul {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
   .skill-card {
-    padding: 0;
-    margin-top: 48px; }
+    padding: 0; }
   .skill-card-inner {
-    padding: 24px;
-    padding-top: 48px; }
+    padding: 24px; }
   .skill-group {
     padding-bottom: 0; } }
 
@@ -1289,6 +1278,30 @@ ul {
 .row-zoo .text-btn {
   position: absolute;
   margin-top: 32px; }
+
+@media (max-width: 950px) {
+  .col-3-12 {
+    width: 50%;
+    margin-top: 80px; }
+  .col-zoo {
+    padding-left: 72px; }
+  .squarebear {
+    padding-left: 32px; }
+  .pinkboli {
+    margin-top: -180px; }
+  .vtwbear {
+    margin-top: 280px; } }
+
+@media (max-width: 600px) {
+  .col-3-12 {
+    width: 100%;
+    margin-top: 180px; }
+  .squarebear {
+    margin-top: 32px; }
+  .squarecat {
+    margin-top: 100px; }
+  .pinkboli {
+    margin-top: 100px; } }
 
 .contact {
   padding-top: 80px;
