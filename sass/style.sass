@@ -1,0 +1,1251 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900')
+@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css')
+
+$blackcolor: #554236
+$whitecolor: #fefefe
+$maincolor: #E98B2A
+$subcolor: F17C67
+
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+@mixin posa($b:0,$l:0)
+  position: absolute
+  bottom: $b
+  left: $l
+
+*
+  position: relative
+  box-sizing: border-box
+
+body,html
+  font-family: 'Helvetica', 微軟正黑體, 'Noto Sans TC', 'robot', arial, sans-serif
+  // width: 100%
+
+h1,h2,h3,h4,h5,h6,p
+  margin: 0
+  color: $maincolor
+  font-family: 'Helvetica', 微軟正黑體, 'Noto Sans TC', 'robot', arial, sans-serif
+
+h1 
+  font-size: 80px
+  font-weight: 800
+  margin-top: 24px
+  margin-bottom: 24px
+
+h2
+  font-size: 48px
+  font-weight: 600
+  margin-top: 24px
+  margin-bottom: 24px
+
+h3
+  font-size: 40px
+  font-weight: 600
+  line-height: 48px
+  margin-top: 24px
+  margin-bottom: 24px
+
+h4
+  font-size: 24px
+  font-weight: 600
+  line-height: 32px
+  margin-top: 24px
+  margin-bottom: 24px
+
+h5
+  font-size: 20px
+  font-weight: 400
+  line-height: 1
+  margin-top: 24px
+  margin-bottom: 16px
+
+h6
+  font-size: 18px
+  font-weight: 400
+  line-height: 32px
+  margin-top: 24px
+  margin-bottom: 16px
+
+.subtitle
+  font-size: 48px
+  font-weight: 900
+  font-family: 'Raleway', 'Helvetica', 微軟正黑體, 'Noto Sans TC', 'robot', arial, sans-serif
+  margin-top: 24px
+  margin-bottom: 24px
+  color: $blackcolor
+
+@media(max-width:768px)
+  .subtitle
+    font-size: 40px
+
+p
+  font-size: 16px
+  font-weight: 400
+  font-family: 'Helvetica', 微軟正黑體, 'Noto Sans TC', 'robot', arial, sans-serif
+  line-height: 32px
+  letter-spacing: 0
+  margin-bottom: 16px
+
+a
+  color: $maincolor
+  text-decoration: none
+  &:hover, &:active, &:focus
+    color: $maincolor
+    text-decoration: none
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+.u-push-right
+  float: right !important
+.u-pull-left
+  float: left !important
+.u-text-center
+  text-align: center !important
+.u-cf:after
+  content: ""
+  clear: both
+  display: block
+  height: 0
+  visibility: hidden
+
+@media(max-width:768px)
+  .u-xs-hidden
+    display: none !important
+
+.row
+  &:after
+    content: ""
+    clear: both
+    display: block
+    height: 0
+    visibility: hidden
+
+.formrow
+  margin-right: -16px
+  margin-left: -16px
+
+.col-2-12,.col-3-12,.col-4-12,.col-5-12,.col-6-12,.col-12-12
+  padding-left: 16px
+  padding-right: 16px
+  float: left
+
+.col-3-12
+  width: 25%
+
+.col-4-12
+  width: 33.33333%
+
+.formcol
+  padding-right: 16px
+
+.col-6-12
+  width: 50%
+
+.col-12-12
+  width: 100%
+
+
+@media(max-width:768px)
+  .col-6-12,.col-4-12
+    width: 100%
+  .col-3-12
+    width: 50%
+    margin-top: 80px
+    
+
+@media(min-width:768px)
+  .col-push-3
+    position: relative
+    left: 25%
+
+  .col-push-5
+    position: relative
+    left: 41.66667%
+
+  .col-push-6
+    position: relative
+    left: 50%
+
+  .col-push-1
+    position: relative
+    left: 8.33333%
+
+  .col-pull-5
+    position: relative
+    left: -41.66667%
+
+.container
+  margin-left: auto
+  margin-right: auto
+  padding-left: 16px
+  padding-right: 16px
+  max-width: 1172px
+
+.color-white
+  color: $whitecolor
+
+// background:
+.bg
+  position: fixed
+  top: 0
+  left: 0
+  +size(100%)
+  background-image: url("https://images.trvl-media.com/hotels/1000000/540000/539600/539592/d3cbead2_z.jpg")
+  background-size: cover
+  background-position: top
+  &:after
+    +size(100%)
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    background: linear-gradient(60deg,#E98B2A,#EEA9A9)
+    opacity: 0.6
+
+
+// lean-bg
+.lean-bg-top
+  &:before
+    content: ""
+    +size(100%,180px)
+    position: absolute
+    background-color: $whitecolor
+    top: 0
+    transform: skewY(-5deg) translateY(-50%)
+
+.lean-bg-top:before,.lean-bg-bottom:after
+  content: ""
+  +size(100%,180px)
+  position: absolute
+  background-color: $whitecolor
+
+.lean-bg-top
+  margin-top: 160px
+  &:before  
+    top: 0
+    transform: skewY(-5deg) translateY(-50%)
+
+.lean-bg-bottom
+  margin-bottom: 160px
+  &:after
+    bottom: 0
+    transform: skewY(-5deg) translateY(50%)
+
+.lean-bg-no-margin
+  margin: 0
+
+@media(max-width:768px)
+  .lean-bg-top:before,.lean-bg-bottom:after
+    height: 80px
+  .lean-bg-bottom
+    margin-bottom: 80px
+  .lean-bg-top
+    margin-top: 80px
+
+
+// header
+.header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 100
+  transition: all 0.3s
+
+.header-colored
+  background-color: $whitecolor
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1)
+
+.header-colored .menu-toggle span
+  background-color: $maincolor
+
+.header-colored .navbar-social-bar .icon-btn
+  color: $maincolor
+
+// navbar
+.navbar
+  // border: 1px solid #ffffff
+  height: 80px
+
+.navbar-collapse
+  margin-right: -16px
+  margin-left: -16px
+
+@media(max-width:768px)
+  .navbar-social-bar
+    padding: 12px
+
+.navbar-social-bar
+  padding: 24px
+  // border: 1px solid #ffffff
+  float: left
+  .icon-btn
+    color: $whitecolor
+
+.navbar-nav
+  float: right
+
+@media(max-width:768px)
+  .menu-toggle
+    padding: 12px
+    padding-top: 16px
+
+.menu-toggle
+  display: block
+  // border: 1px solid #ffffff
+  padding: 24px
+  padding-top: 26px
+  span
+    +size(32px,2px)
+    display: block
+    background-color: $whitecolor
+    margin-bottom: 8px
+    transition: all 0.3s
+
+  &:hover span:nth-child(1)
+    transform: translateX(-20%)
+  &:hover span:nth-child(3)
+    transform: translateX(20%)
+
+// popup-menu
+.popup-menu
+  z-index: 100
+  position: fixed
+  top: 0
+  left: 0
+  +size(100%)
+  background-color: $whitecolor
+  transition: all 0.3s
+  // 不用display: none是為了可以做時間的變化
+  opacity: 0
+  visibility: hidden
+  &:target
+    opacity: 1
+    visibility: visible
+
+.popup-menu-close
+  +size(80px)
+  padding: 24px
+  display: block
+  float: right
+  transition: all 0.3s
+  margin-right: -16px
+  &:hover
+    transform: rotate(180deg)
+  span
+    position: absolute
+    top: 50%
+    left: 50%
+    +size(32px,2px)
+    background-color: $maincolor
+
+    &:nth-child(1)
+      transform: translate(-50%,-50%) rotate(45deg)
+
+    &:nth-child(2)
+      transform: translate(-50%,-50%) rotate(-45deg)
+
+@media(max-width:768px)
+  .popup-menu-close
+    padding: 12px
+    +size(56px)
+
+.popup-menu-item
+  display: block
+  text-align: center
+  font-family: 'Raleway','Helvetica', 微軟正黑體, 'Noto Sans TC', 'robot', arial, sans-serif
+  font-size: 40px
+  font-weight: 900
+  color: $blackcolor
+  line-height: 80px
+  &:hover
+    color: $maincolor
+
+@media(max-width:768px)
+  .popup-menu-item
+    font-size: 24px
+    line-height: 48px
+
+
+// btn
+.btn
+  display: inline-block
+  vertical-align: top
+  position: relative
+  margin: 0
+  height: 36px
+  padding: 0px 16px
+  min-width: 64px
+  box-sizing: border-box
+  font-size: 14px
+  font-family: 'Raleway','Helvetica', 微軟正黑體, 'Noto Sans TC', 'robot', arial, sans-serif
+  line-height: 36px
+  text-align: center
+  font-weight: 500
+  letter-spacing: 0
+  text-decoration: none
+  color: $subcolor
+  border: 0
+  cursor: pointer
+  overflow: hidden
+  user-select: none
+  // user-drag: none
+  outline: none
+  transition: all 0.3s
+  border-radius: 18px
+  background-color: $maincolor
+  overflow: hidden
+.btn-lg
+  font-size: 20px
+  line-height: 56px
+  height: 56px
+  font-weight: 400
+  border-radius: 28px
+  padding: 0 64px
+.btn-md
+  font-size: 18px
+  line-height: 48px
+  height: 48px
+  font-weight: 400
+  border-radius: 24px
+  padding: 0 64px
+.btn-sm
+  font-size: 14px
+  line-height: 32px
+  height: 32px
+  font-weight: 400
+  border-radius: 16px
+  padding: 0 32px
+
+.btn-primary
+  color: $whitecolor
+
+.btn-primary
+  background-color: $maincolor
+  &:hover,&:active
+    background-color: #FC9F4D
+
+.btn-secondary
+  background-color: inherit
+  border: 1px solid $maincolor
+  color: $maincolor
+  &:hover,&:active
+    background-color: $maincolor
+    color: $whitecolor
+
+.btn-group
+  .btn
+    margin-left: 8px
+    margin-right: 8px
+
+.btn-group
+  text-align: center
+
+// text-btn
+.text-btn
+  display: inline-block
+  position: relative
+  vertical-align: top
+  margin: 0
+  box-sizing: border-box
+  font-size: 14px
+  font-weight: 400
+  letter-spacing: 0
+  text-decoration: none
+  color: $maincolor
+  font-family: 'Raleway','Helvetica', 微軟正黑體, 'Noto Sans TC', 'robot', arial, sans-serif
+.text-btn-primary
+  color: $subcolor
+.text-btn-lg  
+  font-size: 20px
+  line-height: 48px
+  height: 48px
+  font-weight: 900
+  &:before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    +size(0%,2px)
+    background-color: $maincolor
+    transition: all 0.3s
+  &:hover:before  
+    width: 100%
+
+// iconbtn
+.icon-btn
+  display: inline-block
+  +size(32px)
+  line-height: 32px
+  font-size: 24px
+  .icon
+    transition: all 0.3s
+    &:hover
+      transform: translateY(-20%)
+  i
+    display: block
+    text-align: center
+
+// About
+.hero
+  // border: 1px solid #fff
+  padding-top: 20vh
+  padding-bottom: 20vh
+
+@media(max-width:480px)
+  .hero
+    padding-top: 80px
+    padding-bottom: 80px
+
+.hero-bg
+  position: absolute
+  top: 80px
+  +size(100%)
+  background-image: url("http://www.tsta-bj.org/att/pic/04002713/05003965.jpg")
+  background-size: 400px
+  background-repeat: no-repeat
+  background-position: top right
+  left: 50%
+  transform: translateX(-50%)
+  max-width: 1140px
+
+@media(max-width:768px)
+  .hero-bg
+    background-size: 320px
+
+@media(max-width:480px)
+  .hero-bg
+    background-size: 200px
+
+.hero-heading
+  font-size: 120px
+  font-weight: 900
+  color: $whitecolor
+
+@media(max-width:768px)
+  .hero-heading
+    font-size: 48px
+
+// self
+.self  
+  background-color: $whitecolor
+  padding-top: 80px
+  padding-bottom: 80px
+
+@media(max-width:768px)
+  .self
+    padding-top: 40px
+    padding-bottom: 40px
+
+
+.self-content
+  text-align: center
+
+.self-icon
+  +size(64px)
+  border-radius: 50%
+  background-color: $maincolor
+  line-height: 64px
+  font-size: 32px
+  color: $whitecolor
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 24px
+
+.self-text
+  font-size: 18px
+  line-height: 40px
+  color: $blackcolor
+  margin-bottom: 24px
+
+.self-name
+  font-size: 18px
+  line-height: 40px
+  color: $blackcolor
+  span
+    color: $maincolor
+
+// skill
+.skill  
+  padding-top: 80px
+  padding-bottom: 80px
+  background-color: $whitecolor
+
+@media(max-width:768px)
+  .skill
+    padding-top: 40px
+    padding-bottom: 40px
+
+.skill-group
+  padding-top: 80px
+  padding-bottom: 80px
+
+.skill-card
+  // padding-left: 32px
+  margin-bottom: 32px
+  // border: 1px solid black
+
+
+.skill-card-inner
+  background-color: $whitecolor
+  border-radius: 4px
+  box-shadow: 0 3px 10px rgba(0,0,0,0.5)
+  padding: 24px
+  padding-left: 48px
+
+.skill-card-title
+  color: $maincolor
+  font-family: 'Raleway', 'Helvetica', 微軟正黑體, 'Noto Sans TC', 'robot', arial, sans-serif
+  margin-top: 0
+  margin-bottom: 8px
+
+.skill-card-text
+  margin: 0
+  color: $blackcolor
+  padding-left: 24px
+  li
+    // margin-top: 8px
+    line-height: 1.5
+    list-style: circle
+    // &:after
+    //   content: ""
+    //   +size(16px)
+    //   border-radius: 50%
+    //   background-color: $maincolor
+
+.skill-card-icon
+  +size(64px)
+  border-radius: 50%
+  box-shadow: 0 3px 10px rgba(0,0,0,0.5)
+  position: absolute
+  left: 0
+  top: 50%
+  transform: translateY(-50%)
+  background-color: #f3f4f5
+  .image
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    max-width: 60%
+    max-height: 60%
+
+@media(max-width:768px)
+  .skill-card-icon
+    top: 0
+    left: 50%
+    transform: translate(-50%,-50%)
+  .skill-card
+    padding: 0
+    margin-top: 48px
+  .skill-card-inner
+    padding: 24px
+    padding-top: 48px
+  .skill-group
+    padding-bottom: 0
+
+// quote
+.quote
+  // background-color: inherit
+  padding-top: 80px
+  padding-bottom: 80px
+
+@media(max-width:768px)
+  .quote
+    padding-top: 40px
+    padding-bottom: 40px
+
+
+.quote-content
+  text-align: center
+  margin-bottom: 32px
+
+.quote-icon
+  +size(64px)
+  border-radius: 50%
+  background-color: $maincolor
+  line-height: 64px
+  font-size: 32px
+  color: $whitecolor
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 24px
+
+.quote-text
+  font-size: 24px
+  line-height: 40px
+  color: $blackcolor
+  margin-bottom: 24px
+
+.quote-name
+  font-size: 18px
+  line-height: 40px
+  color: $blackcolor
+  span
+    color: $maincolor
+
+// work
+.work
+  padding-top: 80px
+  padding-bottom: 120px
+  background-color: $whitecolor
+
+@media(max-width:768px)
+  .work
+    padding-top: 40px
+    padding-bottom: 80px
+
+.work-list
+  padding-top: 80px
+
+.work-item
+  margin-bottom: 160px
+
+.work-item-text
+  padding-top: 24px
+
+.work-item-text-right
+  text-align: right
+
+.work-item-title
+  font-size: 40px
+  font-family: 'Raleway', 'Helvetica', 微軟正黑體, 'Noto Sans TC', 'robot', arial, sans-serif
+  color: #484848
+
+.work-item-title-right
+  margin-right: -80px
+
+.work-item-title-left
+  margin-left: -80px
+
+.work-item-title-top
+  margin-top: 80px
+
+.work-item-title-center
+  text-align: center
+
+@media(max-width:768px)
+  .work-item
+    margin-bottom: 48px
+  .work-item-title
+    font-size: 24px
+    line-height: 32px
+    margin-top: 0
+    margin-bottom: 0
+  .work-item-text-right
+    text-align: left
+  .work-item-title-right
+    margin-right: 0
+  .work-item-title-left
+    margin-left: 0
+
+.work-item-intro
+  font-size: 16px
+  line-height: 32px  
+
+.image
+  width: 100%
+  display: block
+
+.imgbox
+  width: 100%
+  overflow: hidden
+  // border: 1px solid black
+
+.imgbox-inner
+  width: 100%
+  padding-top: 100%
+  position: relative
+  .image
+    position: absolute
+    top: 0
+    left: 0
+    +size(100%)
+    background-size: cover
+    background-position: center
+  .image-left
+    background-position: left
+
+.imgbox-inner-4-3
+    padding-top: calc(100% * 3 / 4)
+
+// Zoo
+// bear 
+.squarebear
+  .bear
+    +size(170px,0px)
+    // border-radius: 50%/ 45% 45% 35% 35%
+    // background-color: #5a3d0d
+    border-bottom: 180px solid #5a3d0d
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    position: relative
+    
+
+  .face
+    +size(40px)
+    background-color: #d0ba96
+    border-radius: 50%
+    position: absolute
+    left: 55px
+    bottom: -70px
+    &:before
+      content: ""
+      +size(12px)
+      border-radius: 50%
+      z-index: 10
+      background-color: #000
+      position: absolute
+      left: -10px
+      bottom: 40px
+      box-shadow: 20px 20px #000, 28px 20px #000, 24px 24px #000, 24px 20px #000, 45px 0 #000
+    &:after
+      +size(12px)
+      content: ""
+      border-radius: 40%
+      z-index: 1000
+      border-bottom: 3px solid #000
+      position: absolute
+      bottom: 5px
+      left: 16px
+      transform: rotate(-30deg)
+  .paw
+    +size(40px,38px)
+    border-radius: 40%
+    background-color: #5a3d0d
+    position: absolute
+    bottom: -90px
+    left: 145px
+    box-shadow: -185px 0 #5a3d0d, -158px 120px #5a3d0d, -23px 120px #5a3d0d
+    &:after
+      +size(28px,26px)
+      border-radius: 40%
+      content: ""
+      background-color: #d0ba96
+      position: absolute
+      bottom: 6px
+      left: 8px
+      box-shadow: -185px 0 #d0ba96, -158px 120px #d0ba96, -23px 120px #d0ba96
+    
+  .belly
+    position: absolute
+    left: 35px
+    bottom: -160px
+    background-color: #d0ba96
+    border-radius: 40%
+    +size(80px)
+    &:before
+      +size(25px,10px)
+      background-color: #d0ba96
+      border-radius: 50% 50% 0 0/ 70%
+      box-shadow: 110px 0 #d0ba96
+      content: ""
+      border-radius: 40%
+      z-index: 100
+      position: absolute
+      bottom: 165px
+      left: -26px
+  .ear
+    +size(40px,20px)
+    border-radius: 50% 50% 0 0/ 70%
+    background-color: #5a3d0d
+    position: absolute
+    bottom: 0
+    box-shadow: 110px 0 #5a3d0d
+
+// twbear
+.vtwbear
+  .twbear
+    +size(180px)
+    position: relative
+    border-radius: 50% / 45% 45% 5% 5%
+    background-color: #333
+    
+  .head
+    +size(140px)
+    border-radius: 50% / 45% 45% 35% 35%
+    background-color: #333
+    +posa(120px,20px)
+    &:after
+      content: ""
+      +size(50px)
+      background-color: #333
+      border-radius: 50%
+      box-shadow: -110px 0px #333
+      +posa(100px,100px)
+    .face
+      +size(40px)
+      background-color: #fff
+      border-radius: 50%
+      +posa(40px,50px)
+      &:before
+        content: ""
+        +size(12px)
+        border-radius: 50%
+        z-index: 10
+        background-color: #000
+        position: absolute
+        left: -10px
+        bottom: 40px
+        box-shadow: 20px 20px #000, 28px 20px #000, 24px 24px #000, 24px 20px #000, 45px 0 #000
+      &:after
+        +size(12px)
+        content: ""
+        border-radius: 40%
+        z-index: 1000
+        border-bottom: 3px solid #000
+        position: absolute
+        bottom: 5px
+        left: 16px
+        transform: rotate(-30deg)
+    
+    
+  .v
+    +size(0)
+    border-top: 40px solid #fff
+    border-left: 60px solid transparent
+    border-right: 60px solid transparent
+    // z-index: 100
+    // overflow: hidden
+    +posa(90px,28px)
+    &:after
+      content: ""
+      +size(130px,50px)
+      border-radius: 100%
+      z-index: 10
+      background-color: #333
+      +posa(20px,-62px)
+  .paw
+    +size(60px)
+    background-color: #333
+    border-radius: 50% / 45% 45% 35% 35%
+    +posa(-30px,-2px)
+    box-shadow: 125px 0 #333, -40px -120px #333
+  .right_paw
+    +size(60px)
+    border-radius: 50% / 45% 45% 35% 35%
+    background-color: #333
+    +posa(90px,160px)
+    animation: wave 5s infinite linear
+  
+@keyframes wave
+  50%
+    bottom: 90px
+  55%
+    bottom: 100px
+  60%
+    bottom: 100px
+  65%
+    bottom: 90px
+
+// cat
+.squarecat
+  .body
+    border-bottom: 100px solid #ea9310
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    height: 120px
+    width: 120px
+  .leftear
+    width: 0
+    height: 0
+    border-bottom: 25px solid #ea9310
+    border-right: 15px solid transparent
+    position: absolute
+    bottom: 0
+  .rightear
+    width: 0
+    height: 0
+    border-bottom: 25px solid #ea9310
+    border-left: 15px solid transparent
+    position: absolute
+    bottom: 0
+    right: 0
+    
+  .cat
+    position: relative
+    &:after,&:before
+      position: absolute
+      bottom: -45px
+      width: 20px
+      height: 2px
+      content: ""
+      z-index: 100
+      background-color: #000
+      box-shadow: 0 5px #000, 75px 0px #000, 75px 5px #000
+    
+  .eye
+    width: 8px
+    height: 8px
+    background-color: #000
+    border-radius: 50%
+    z-index: 10
+    animation: blink 8s infinite linear
+    
+    &.left
+      position: absolute
+      bottom: -30px
+      left: 23px
+    &.right
+      position: absolute
+      bottom: -30px
+      right: 23px
+  .nose
+    width: 6px
+    height: 6px
+    z-index: 10
+    border-radius: 50%
+    background-color: #000
+    box-shadow: 2px 0 #000, 1px 1px #000
+    position: absolute
+    bottom: -48px
+    left: 45px
+    animation: yawn 8s infinite linear
+    &:before,&:after
+      content: ""
+      z-index: 100
+      width: 16px
+      height: 20px
+      border-radius: 50% / 40%
+      position: absolute
+      left: -15px
+      // border: 2px solid black
+      border-bottom: 2px solid #000
+      border-right: 2px solid #000
+      border-left: 2px solid transparent
+      border-top: 2px solid transparent
+      box-shadow: 0px 0px #000
+    &:after
+      left: 3.5px
+      transform: rotateY(180deg)
+      
+
+  .tail  
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    border: 5px solid #ea9310
+    border-left: 0
+    border-top: 0
+    position: absolute
+    bottom: -100px
+    right: -50px
+  
+@keyframes blink
+  32%
+    height: 8px
+  38%
+    height: 1px
+  42%
+    height: 1px
+  48%
+    height: 8px
+  
+@keyframes yawn 
+  32% 
+    box-shadow: 2px 0 #000, 1px 1px #000, 0px 18px transparent, 2px 18px transparent, 1px 20px transparent
+  35% 
+    box-shadow: 2px 0 #000, 1px 1px #000, 0px 18px #650000, 2px 18px #650000, 1px 20px transparent
+  38% 
+    box-shadow: 2px 0 #000, 1px 1px #000, 0px 18px #650000, 2px 18px #650000, 1px 20px #650000
+  42%
+    box-shadow: 2px 0 #000, 1px 1px #000, 0px 18px #650000, 2px 18px #650000, 1px 20px #650000
+  45% 
+    box-shadow: 2px 0 #000, 1px 1px #000, 0px 18px #650000, 2px 18px #650000, 1px 20px transparent
+  48% 
+    box-shadow: 2px 0 #000, 1px 1px #000, 0px 18px transparent, 2px 18px transparent, 1px 20px transparent
+
+// boli
+.pinkboli  
+  .boli 
+    +size(200px,150px)
+    background-color: pink
+    border-radius: 50%   50%  50%  50%  / 60%   60%   40%  40%
+    position: relative
+    animation: ani 5s ease-out infinite
+    &:after,&:before
+      content: ""
+      z-index: 100
+      +size(25px,25px)
+      border-radius: 50% / 40%
+      position: absolute
+      border-bottom: 2px solid #000
+      border-left: 2px solid transparent
+      box-shadow: 0px 0px #000
+    &:after
+      bottom: 12%
+      left: 28%
+    &:before
+      bottom: 12%
+      left: 41%
+      transform: rotateY(180deg)
+      
+    
+  .top
+    +size(30px)
+    background-color: pink
+    border-radius: 50%
+    position: absolute
+    left: 70%
+    top: 5%
+    
+  .bottom
+    +size(170px,80px)
+    background-color: #f495a5
+    border-radius: 50%
+    position: absolute
+    bottom: 5%
+    left: 50%
+    transform: translateX(-50%)
+
+  .eye
+    +size(30px)
+    border-radius: 50%
+    background-color: black
+    position: absolute
+    
+    &.left
+      bottom: 40%
+      left: 20%
+    &.right
+      bottom: 38%
+      left: 50%
+    
+    &:after
+      content: ""
+      +size(9px)
+      background-color: white
+      border-radius: 50%
+      position: absolute
+      left: 15%
+      top: 18%
+    
+  .cheek
+    +size(40px,15px)
+    border-radius: 50%
+    background-color: #f4b7c1
+    position: absolute
+    
+    &.left
+      bottom: 28%
+      left: 5%
+    &.right
+      bottom: 20%
+      left: 60%
+    
+@keyframes ani
+  0% 
+    transform: scale(1)
+
+  20% 
+    transform: scaleY(0.95) scaleX(1.05)
+
+  48%
+    transform: scaleY(1.1) scaleX(0.9)
+
+  68% 
+    transform: scaleY(0.98) scaleX(1.02)
+
+  80% 
+    transform: scaleY(1.02) scaleX(0.98)
+
+  97%, 100% 
+    transform: scale(1)
+
+.row-zoo
+  .text-btn
+    position: absolute
+    // left: 50%
+    margin-top: 32px
+
+@media(max-width:768px)
+  
+
+// contact
+.contact
+  padding-top: 80px
+  padding-bottom: 80px
+
+@media(max-width:768px)
+  .contact
+    padding-top: 40px
+    padding-bottom: 40px
+
+.form
+  max-width: 600px
+  margin-right: auto
+  margin-left: auto
+
+.form input[type="text"],.form input[type="tel"],.form input[type="email"],.form textarea
+  padding: 8px 16px
+  display: inline-block
+  border: 1px solid #cdcdcd
+  border-radius: 4px
+  vertical-align: middle
+  box-sizing: border-box
+  width: 100%
+  margin-bottom: 16px
+  background-color: inherit
+  color: $whitecolor
+
+.form input[type="text"]:focus,.form input[type="tel"]:focus,.form input[type="email"]:focus,.form textarea:focus
+  outline: 0
+  border: 1px solid $maincolor
+
+.form textarea
+  resize: none
+
+.form label
+  margin-bottom: 8px
+  display: inline-block
+  vertical-align: middle
+  color: $whitecolor
+
+.form-btn-group
+  margin-top: 32px
+
+.divide-text
+  text-align: center
+  margin-top: 80px
+  margin-bottom: 80px
+  font-size: 28px
+  line-height: 32px
+  color: $whitecolor
+.info 
+  text-align: center
+  .info-email
+    margin-bottom: 16px
+    a
+      color: $whitecolor
+      font-size: 24px
+      font-weight: 400
+  .info-phone
+    margin-bottom: 16px
+    a
+      color: $whitecolor
+      font-size: 24px
+      font-weight: 400
+
+.info-social-bar
+  .icon-btn
+    color: $maincolor
+
+.footer
+  padding-top: 40px
+  padding-bottom: 40px
+
+.final-text
+  text-align: center
+  margin-right: auto
+  margin-left: auto
+  max-width: 600px
+
+.copyright
+  text-align: center
+  font-size: 14px
